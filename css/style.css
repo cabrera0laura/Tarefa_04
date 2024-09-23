@@ -1,0 +1,60 @@
+h1 {
+    color: orange;
+}
+.menubar{  
+    width: 90%;
+    padding:16px;
+    background-color: rgb(10, 10, 10);
+    display: flex; 
+    margin:0 auto;
+}
+.menu {   
+    display: flex;
+    align-items: center;
+    margin: 0;
+    list-style-type: none;
+}
+.menu .item{  
+    position: relative;   
+}
+.menu.item:hover{ /* efeito hover nos itens do menu principal */
+    background-color:black;
+}
+.menu .item a{
+    color: #fff; 
+    padding:16px;
+    text-decoration: none;
+    display: flex;
+}
+.menu .item a:hover{ /* efeito hover nos links do menu principal */
+    background-color: black;
+}
+.submenu{
+    display: none; /* esconde o submenu dropdown */
+    position: absolute;
+    width:100%;  
+}
+.sd-item:hover .submenu{
+    display: flex;  
+}
+.submenu .sd-item{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+    width: 100%;
+ }
+.submenu .sd-item a{
+    width:100%;
+    padding:16px;
+    background-color: black;
+    color: #fff; 
+}
+.submenu .sd-item a:hover { /* efeito hover nos itens do submenu dropdown */
+    background-color: gray;
+}
+.menu .item:hover .submenu{   /*efeito hover para alterar a cor de fundo*/
+    background-color: black; 
+    display: flex; /* exibir o submenu dropdown */
+}
